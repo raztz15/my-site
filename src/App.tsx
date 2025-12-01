@@ -11,9 +11,9 @@ function App() {
   }
 
   return (
-    <Box>
+    <Box sx={{ minHeight: '100vh', bgcolor: 'background.default', color: 'text.primary' }}>
       {/* Top navigation */}
-      <AppBar position='sticky' elevation={0} color='transparent'>
+      <AppBar position='sticky' elevation={1} sx={{ bgcolor: 'rgba(2,6,23,0.85)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(148, 163, 184, 0.3)' }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Typography
             variant="h6"
