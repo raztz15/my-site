@@ -37,7 +37,7 @@ function App() {
       <Box component='main'>
         {/* HERO */}
         <Box
-          id='hero'
+          id="hero"
           sx={{
             minHeight: '80vh',
             display: 'flex',
@@ -45,21 +45,32 @@ function App() {
             py: 8,
           }}
         >
-          <Container maxWidth='md'>
-            <Typography variant="h2" component="h1" gutterBottom>
-              Hi, I&apos;m Dekel.
-            </Typography>
-            <Typography variant="h5" color="text.secondary" gutterBottom>
-              Frontend / Full-Stack Developer (React, TypeScript, Go)
-            </Typography>
-            <Typography variant="body1" sx={{ maxWidth: 600, mt: 2 }}>
-              I build clean, reliable web applications with a strong focus on UX, performance, and
-              maintainable code. I love turning complex problems into simple, intuitive interfaces.
+          <Container maxWidth="md">
+            <Typography variant="overline" sx={{ letterSpacing: 2 }}>
+              HELLO THERE 👋
             </Typography>
 
-            <Stack direction='row' spacing={2} sx={{ mt: 4 }}>
-              <Button variant='contained'>View CV</Button>
-              <Button variant='outlined' onClick={() => handleScrollTo('projects')}>View Projects</Button>
+            <Typography variant="h2" component="h1" gutterBottom>
+              I&apos;m <strong>Dekel Raz</strong>.
+            </Typography>
+
+            <Typography variant="h5" color="text.secondary" gutterBottom>
+              <strong>Frontend / Full-Stack Developer</strong> working with <strong>React</strong>,{' '}
+              <strong>TypeScript</strong> &amp; <strong>Go</strong>.
+            </Typography>
+
+            <Typography variant="body1" sx={{ maxWidth: 650, mt: 2 }}>
+              I enjoy building <strong>clean</strong>, <strong>fast</strong> and{' '}
+              <strong>user-friendly</strong> web applications. Give me a messy problem, some{' '}
+              <strong>complex data</strong> or a tricky <strong>user flow</strong>, and I&apos;ll turn it
+              into something that feels simple and intuitive to use.
+            </Typography>
+
+            <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: 'wrap' }}>
+              <Button variant="contained">View CV</Button>
+              <Button variant="outlined" onClick={() => handleScrollTo('projects')}>
+                View Projects
+              </Button>
               <Button variant="text" onClick={() => handleScrollTo('contact')}>
                 Contact Me
               </Button>
@@ -73,10 +84,28 @@ function App() {
             <Typography variant="h4" gutterBottom>
               About
             </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+              I&apos;m a <strong>web developer based in Israel</strong>, with experience building
+              <strong> production-grade web apps</strong> using <strong>React</strong>,{' '}
+              <strong>TypeScript</strong> and <strong>Go</strong>. I care a lot about{' '}
+              <strong>clean code</strong>, <strong>clear architecture</strong> and interfaces that feel
+              <strong> smooth</strong> and <strong>responsive</strong>.
+            </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+              Most of my work revolves around <strong>real-world operations</strong>: back-office tools,
+              <strong> dashboards</strong> and <strong>complex data tables</strong> with sorting, filtering,
+              grouping and live updates. I like understanding the <strong>full flow end-to-end</strong> –
+              not just the UI, but also how the data moves and why users need it.
+            </Typography>
+
             <Typography variant="body1">
-              This is a placeholder for your About section. We&apos;ll write a proper story here:
-              who you are, what you enjoy building, and a bit of personality (Pokémon, dancing,
-              curiosity about how things work, etc.).
+              Outside of coding, I&apos;m into <strong>Pokémon</strong>, <strong>dancing</strong> and
+              constantly <strong>learning how things work</strong> – from JavaScript internals and computer
+              science basics to new ways of structuring frontend apps. I&apos;m looking for teams that value
+              <strong> curiosity</strong>, <strong>ownership</strong> and <strong>good engineering</strong>,
+              not just shipping features fast.
             </Typography>
           </Container>
         </Box>
