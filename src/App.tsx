@@ -42,11 +42,11 @@ function App() {
           </Typography>
 
           <Stack direction='row' spacing={2}>
-            <Button onClick={() => handleScrollTo('about')}>About</Button>
-            <Button onClick={() => handleScrollTo('experience')}>Experience</Button>
-            <Button onClick={() => handleScrollTo('projects')}>Projects</Button>
-            <Button onClick={() => handleScrollTo('skills')}>Skills</Button>
-            <Button onClick={() => handleScrollTo('contact')}>Contact</Button>
+            <Button className="nav-button" onClick={() => handleScrollTo('about')}>About</Button>
+            <Button className="nav-button" onClick={() => handleScrollTo('experience')}>Experience</Button>
+            <Button className="nav-button" onClick={() => handleScrollTo('projects')}>Projects</Button>
+            <Button className="nav-button" onClick={() => handleScrollTo('skills')}>Skills</Button>
+            <Button className="nav-button" onClick={() => handleScrollTo('contact')}>Contact</Button>
           </Stack>
         </Toolbar>
       </AppBar>
