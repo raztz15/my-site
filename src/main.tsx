@@ -46,9 +46,19 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 9999, // pill shape
+          borderRadius: 9999,
           paddingInline: 20,
           paddingBlock: 10,
+          transition: 'all 160ms ease-out',
+          boxShadow: '0 0 0 rgba(0,0,0,0)',
+          '&.MuiButton-containedPrimary': {
+            boxShadow: '0 4px 12px rgba(0,0,0,0.35)',
+            backgroundImage: 'linear-gradient(90deg, #6366f1, #4f46e5)',
+          },
+          '&.MuiButton-containedPrimary:hover': {
+            backgroundImage: 'linear-gradient(90deg, #ff8a00, #ffc300)',
+            boxShadow: '0 8px 20px rgba(255,165,0,0.28)',
+          },
         },
       },
     },
