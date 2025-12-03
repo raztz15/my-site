@@ -1,8 +1,15 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import { glassCardSx, hoverGlowSx } from '../theme/sx/cards'
-import { Email, GitHub, LinkedIn } from '@mui/icons-material'
+import { Email, GitHub, LinkedIn, WhatsApp } from '@mui/icons-material'
 
 export const Contact = () => {
+    const emailHref =
+        'https://mail.google.com/mail/?view=cm&fs=1&to=raztz15@gmail.com&su=Let%27s%20talk%20about%20your%20next%20role&body=Hi%20Dekel,%0D%0A%0D%0AI%20saw%20your%20portfolio%20website%20and%20wanted%20to%20reach%20out%20about...';
+
+    const whatsappHref =
+        'https://wa.me/972527499234?text=Hi%20Dekel,%20I%20just%20visited%20your%20portfolio%20and%20wanted%20to%20reach%20out.';
+
+
     return (
         <Box id="contact" sx={{ py: 8 }}>
             <Container maxWidth="sm">
@@ -40,10 +47,33 @@ export const Contact = () => {
                             variant="contained"
                             startIcon={<Email />}
                             component="a"
-                            href="mailto:raztz15@gmail.com"
+                            href={emailHref}
+                            target="_blank"
+                            rel="noreferrer"
                             sx={{ textTransform: 'none', minWidth: 230 }}
                         >
                             Email me
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<WhatsApp />}
+                            component="a"
+                            href={whatsappHref}
+                            target="_blank"
+                            rel="noreferrer"
+                            sx={{
+                                textTransform: 'none',
+                                minWidth: 230,
+                                borderColor: 'rgba(37,211,102,0.6)',
+                                color: 'rgba(240,253,244,0.95)',
+                                '&:hover': {
+                                    borderColor: 'rgba(37,211,102,0.9)',
+                                    backgroundColor: 'rgba(22,163,74,0.15)',
+                                },
+                            }}
+                        >
+                            WhatsApp
                         </Button>
 
                         <Button

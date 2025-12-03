@@ -39,7 +39,7 @@ export const Projects = () => {
                             <strong> favorites</strong>, and both a full <strong>Pokémon profile view</strong> and
                             a compact <strong>drawer</strong> for quick info.</>, <> I focused on <strong>clean architecture</strong>, <strong>custom hooks</strong> and
                             <strong> reusable components</strong>, so the app stays
-                            <strong> scalable</strong> and <strong>maintainable</strong> as features grow. which is helpful to me</>, <>Data is persisted with <strong>local storage</strong>, and <strong>RTK Query </strong>
+                            <strong> scalable</strong> and <strong>maintainable</strong> as features grow. With emphasis on best practices</>, <>Data is persisted with <strong>local storage</strong>, and <strong>RTK Query </strong>
                             handles API access, caching and performance so the UI feels fast and smooth.</>]}
                     />
 
