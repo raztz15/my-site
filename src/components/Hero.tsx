@@ -64,7 +64,13 @@ export const Hero = () => {
                                 </Typography>
 
                                 <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: 'wrap' }}>
-                                    <Button variant="contained">View CV</Button>
+                                    <Button
+                                        variant="contained"
+                                        component='a'
+                                        href='/Full Stack Front End Developer.pdf'
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                    >View CV</Button>
                                     <Button variant="outlined" onClick={() => handleScrollTo('projects')}>
                                         View Projects
                                     </Button>
