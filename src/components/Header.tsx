@@ -1,8 +1,8 @@
 import { AppBar, Box, Button, Drawer, IconButton, List, ListItemButton, ListItemText, Stack, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useState } from 'react'
-import { type SectionId } from '../hooks/useActiveSection';
 import MenuIcon from '@mui/icons-material/Menu';
 import { handleScrollTo } from '../utils';
+import type { SectionId } from '../hooks/useActiveSection';
 
 
 const navItems: { id: SectionId; label: string }[] = [
