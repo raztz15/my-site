@@ -1,14 +1,42 @@
 
-import { AppBar, Box, Toolbar, Typography, Button, Stack } from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Button, Stack, useTheme, useMediaQuery } from '@mui/material';
 import { Hero } from './components/Hero';
-import { handleScrollTo } from './utils';
+// import { handleScrollTo } from './utils';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
+import { useActiveSection, type SectionId } from './hooks/useActiveSection';
+import { useState } from 'react';
+import { Header } from './components/Header';
+
+const navItems: { id: SectionId; label: string }[] = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
+];
 
 function App() {
+
+
+  const activeSection = useActiveSection();
+
+
+  const handleScrollTo = (id: SectionId) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const yOffset = -80; // adjust to your AppBar height
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
+
+
 
   return (
     <Box
@@ -21,35 +49,7 @@ function App() {
       }}
     >
       {/* Top navigation */}
-      <AppBar position="sticky"
-        elevation={2}
-        sx={{
-          bgcolor: 'rgba(2, 6, 23, 0.85)',
-          backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid rgba(148, 163, 184, 0.35)',
-        }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 700, cursor: 'pointer', background: 'linear-gradient(90deg, #ff8a00 , #ffc300)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-            onClick={() => handleScrollTo('hero')}
-          >
-            Dekel Raz
-          </Typography>
-
-          <Stack direction='row' spacing={2}>
-            <Button className="nav-button" onClick={() => handleScrollTo('about')}>About</Button>
-            <Button className="nav-button" onClick={() => handleScrollTo('experience')}>Experience</Button>
-            <Button className="nav-button" onClick={() => handleScrollTo('projects')}>Projects</Button>
-            <Button className="nav-button" onClick={() => handleScrollTo('skills')}>Skills</Button>
-            <Button className="nav-button" onClick={() => handleScrollTo('contact')}>Contact</Button>
-          </Stack>
-        </Toolbar>
-      </AppBar>
+      <Header />
 
       {/* Main content */}
       <Box component='main'>
