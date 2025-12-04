@@ -132,12 +132,13 @@ export const Header = () => {
                 disableDiscovery={false}
                 PaperProps={{
                     sx: {
-                        bgcolor: 'rgba(15,23,42,0.98)',
+                        bgcolor: 'radial-gradient(circle at top, rgba(99,102,241,0.35), transparent 55%), radial-gradient(circle at bottom left, rgba(56,189,248,0.22), transparent 55%), #020617',
                         color: 'rgba(248,250,252,0.95)',
                         width: '100%',
                         borderLeft: '1px solid rgba(148,163,184,0.4)',
                         boxShadow: '0 0 40px rgba(15,23,42,0.9)',
                         borderRadius: '10px 10px 0 0 ',
+                        opacity: .95,
                     },
                 }}
             >
