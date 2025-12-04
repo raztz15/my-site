@@ -2,9 +2,10 @@ import { AppBar, Box, Button, Drawer, IconButton, List, ListItemButton, ListItem
 import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { handleScrollTo } from '../utils';
-import type { SectionId } from '../hooks/useActiveSection';
 
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SECTION_IDS = ['about', 'experience', 'projects', 'skills', 'contact', 'hero'] as const;
+export type SectionId = (typeof SECTION_IDS)[number];
 const navItems: { id: SectionId; label: string }[] = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
