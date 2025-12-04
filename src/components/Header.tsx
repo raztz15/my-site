@@ -180,7 +180,6 @@ export const Header = () => {
                     <List>
                         {navItems.map((item) => {
                             const isActive = activeSection === item.id;
-
                             return (
                                 <ListItemButton
                                     key={item.id}
@@ -190,7 +189,8 @@ export const Header = () => {
                                         mb: 0.5,
                                         py: 1,
                                         px: 1.5,
-                                        bgcolor: isActive ? 'rgba(30,64,175,0.6)' : 'transparent',
+                                        // bgcolor: isActive ? 'rgba(30,64,175,0.6)' : 'transparent',
+                                        background: isActive ? 'linear-gradient(90deg, #ff8a00, #ffcf33)' : 'transparent',
                                         '&:hover': {
                                             bgcolor: isActive
                                                 ? 'rgba(30,64,175,0.75)'
@@ -203,7 +203,8 @@ export const Header = () => {
                                         primaryTypographyProps={{
                                             fontSize: 14,
                                             fontWeight: isActive ? 600 : 500,
-                                            color: isActive ? '#ffcf33' : 'rgba(248,250,252,0.9)',
+                                            // color: isActive ? '#ffcf33' : 'rgba(248,250,252,0.9)',
+                                            color: 'rgba(248,250,252,0.9)',
                                         }}
                                     />
                                 </ListItemButton>
