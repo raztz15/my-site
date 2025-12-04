@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Drawer, IconButton, List, ListItemButton, ListItemText, Stack, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useState } from 'react'
-import { useActiveSection, type SectionId } from '../hooks/useActiveSection';
+import { type SectionId } from '../hooks/useActiveSection';
 import MenuIcon from '@mui/icons-material/Menu';
 import { handleScrollTo } from '../utils';
 
@@ -17,7 +17,7 @@ export const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const activeSection = useActiveSection();
+    // const activeSection = useActiveSection();
 
     // const handleScrollTo = (id: SectionId) => {
     //     const el = document.getElementById(id);
@@ -76,7 +76,7 @@ export const Header = () => {
                         // DESKTOP: buttons row
                         <Stack direction="row" spacing={1.5}>
                             {navItems.map((item) => {
-                                const isActive = activeSection === item.id;
+                                // const isActive = activeSection === item.id;
 
                                 return (
                                     <Button
@@ -85,7 +85,7 @@ export const Header = () => {
                                         sx={{
                                             textTransform: 'none',
                                             fontSize: 14,
-                                            fontWeight: isActive ? 600 : 500,
+                                            // fontWeight: isActive ? 600 : 500,
                                             // color: isActive ? '#ffcf33' : 'rgba(248,250,252,0.82)',
                                             position: 'relative',
                                             '&::after': {
@@ -102,11 +102,11 @@ export const Header = () => {
                                                 // transform: isActive ? 'scaleX(1)' : 'scaleX(0.4)',
                                                 // transition: 'background 180ms ease-out, transform 180ms ease-out',
                                             },
-                                            '&:hover::after': {
-                                                background: isActive
-                                                    ? 'linear-gradient(90deg, #ff8a00, #ffcf33)'
-                                                    : 'rgba(148,163,184,0.7)',
-                                            },
+                                            // '&:hover::after': {
+                                            //     background: isActive
+                                            //         ? 'linear-gradient(90deg, #ff8a00, #ffcf33)'
+                                            //         : 'rgba(148,163,184,0.7)',
+                                            // },
                                         }}
                                     >
                                         {item.label}
@@ -135,7 +135,7 @@ export const Header = () => {
                 <Box sx={{ mt: 2 }}>
                     <List>
                         {navItems.map((item) => {
-                            const isActive = activeSection === item.id;
+                            // const isActive = activeSection === item.id;
 
                             return (
                                 <ListItemButton
@@ -153,8 +153,8 @@ export const Header = () => {
                                         primary={item.label}
                                         primaryTypographyProps={{
                                             fontSize: 14,
-                                            fontWeight: isActive ? 600 : 500,
-                                            color: isActive ? '#ffcf33' : 'rgba(248,250,252,0.9)',
+                                            // fontWeight: isActive ? 600 : 500,
+                                            // color: isActive ? '#ffcf33' : 'rgba(248,250,252,0.9)',
                                         }}
                                     />
                                 </ListItemButton>
