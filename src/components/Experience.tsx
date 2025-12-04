@@ -174,7 +174,7 @@ export const Experience = () => {
                                     fontSize: { xs: '0.9rem', md: '0.95rem' },
                                 }}
                             >
-                                2023 – 2024 · Israel
+                                2021 – 2024 · Israel
                             </Typography>
 
                             <Typography
