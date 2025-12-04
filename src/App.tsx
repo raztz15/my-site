@@ -1,5 +1,5 @@
 
-import { AppBar, Box, Toolbar, Typography, Button, Stack, useTheme, useMediaQuery } from '@mui/material';
+import { Box } from '@mui/material';
 import { Hero } from './components/Hero';
 // import { handleScrollTo } from './utils';
 import { About } from './components/About';
@@ -7,36 +7,9 @@ import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
-import { useActiveSection, type SectionId } from './hooks/useActiveSection';
-import { useState } from 'react';
 import { Header } from './components/Header';
 
-const navItems: { id: SectionId; label: string }[] = [
-  { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'contact', label: 'Contact' },
-];
-
 function App() {
-
-
-  const activeSection = useActiveSection();
-
-
-  const handleScrollTo = (id: SectionId) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    const yOffset = -80; // adjust to your AppBar height
-    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  };
-
-
-
 
   return (
     <Box
