@@ -9,10 +9,10 @@ export const Hero = () => {
         <Box
             id="hero"
             sx={{
-                minHeight: '80vh',
+                minHeight: { xs: 'auto', md: '80vh' },
                 display: 'flex',
-                alignItems: 'center',
-                py: 10,
+                alignItems: { xs: 'flex-start', md: 'center' },
+                py: { xs: 6, md: 10 },
                 background:
                     'radial-gradient(circle at top, rgba(99, 102, 241, 0.45), transparent 55%)',
             }}
@@ -20,9 +20,21 @@ export const Hero = () => {
             <Container maxWidth="xl">
                 <Box sx={gradientFrameSx}>
                     <Box sx={{ ...glassCardSx, ...hoverGlowSx }}>
-                        <Grid container spacing={4} alignItems="center" justifyContent='space-between'>
+                        <Grid
+                            container
+                            spacing={4}
+                            alignItems="center"
+                        >
                             {/* TEXT SIDE */}
-                            <Grid sx={{ display: 'flex', flexDirection: 'column' }}>
+                            <Grid
+                                size={{ xs: 12, md: 7 }}
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: { xs: 'center', md: 'flex-start' },
+                                    textAlign: { xs: 'center', md: 'left' },
+                                }}
+                            >
                                 <Typography
                                     variant="overline"
                                     sx={{
@@ -36,7 +48,15 @@ export const Hero = () => {
                                     HELLO THERE 👋
                                 </Typography>
 
-                                <Typography variant="h2" component="h1" gutterBottom>
+                                <Typography
+                                    variant="h2"
+                                    component="h1"
+                                    gutterBottom
+                                    sx={{
+                                        fontSize: { xs: '2.2rem', md: '3.2rem' },
+                                        lineHeight: { xs: 1.2, md: 1.3 },
+                                    }}
+                                >
                                     I&apos;m{' '}
                                     <Box
                                         component="span"
@@ -51,42 +71,89 @@ export const Hero = () => {
                                     </Box>
                                 </Typography>
 
-                                <Typography variant="h5" color="text.secondary" gutterBottom sx={{ mb: 1.5 }}>
+                                <Typography
+                                    variant="h5"
+                                    color="text.secondary"
+                                    gutterBottom
+                                    sx={{ mb: 1.5, fontSize: { xs: '1.1rem', md: '1.3rem' } }}
+                                >
                                     <strong>Frontend / Full-Stack Developer</strong> working with <strong>React</strong>,{' '}
                                     <strong>TypeScript</strong> &amp; <strong>Go</strong>.
                                 </Typography>
 
-                                <Typography variant="body1" sx={{ maxWidth: 650, mt: 2 }}>
+                                <Typography
+                                    variant="body1"
+                                    sx={{
+                                        maxWidth: { xs: '100%', md: 650 },
+                                        mt: 2,
+                                    }}
+                                >
                                     I enjoy building <strong>clean</strong>, <strong>fast</strong> and{' '}
                                     <strong>user-friendly</strong> web applications. Give me a messy problem, some{' '}
                                     <strong>complex data</strong> or a tricky <strong>user flow</strong>, and I&apos;ll
                                     turn it into something that feels simple and intuitive to use.
                                 </Typography>
 
-                                <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: 'wrap' }}>
+                                {/* BUTTONS */}
+                                <Stack
+                                    direction={{ xs: 'column', sm: 'row' }}
+                                    spacing={2}
+                                    sx={{
+                                        mt: { xs: 3, md: 4 },
+                                        width: '100%',
+                                        maxWidth: 420,
+                                        justifyContent: { xs: 'center', md: 'flex-start' },
+                                    }}
+                                >
                                     <Button
                                         variant="contained"
                                         component='a'
                                         href='/Full Stack Front End Developer.pdf'
                                         target='_blank'
                                         rel='noopener noreferrer'
-                                    >View CV</Button>
-                                    <Button variant="outlined" onClick={() => handleScrollTo('projects')}>
+                                        sx={{
+                                            width: { xs: '100%', sm: 'auto' },
+                                        }}
+                                    >
+                                        View CV
+                                    </Button>
+
+                                    <Button
+                                        variant="outlined"
+                                        onClick={() => handleScrollTo('projects')}
+                                        sx={{
+                                            width: { xs: '100%', sm: 'auto' },
+                                        }}
+                                    >
                                         View Projects
                                     </Button>
-                                    <Button variant="text" onClick={() => handleScrollTo('contact')}>
+
+                                    <Button
+                                        variant="text"
+                                        onClick={() => handleScrollTo('contact')}
+                                        sx={{
+                                            width: { xs: '100%', sm: 'auto' },
+                                        }}
+                                    >
                                         Contact Me
                                     </Button>
                                 </Stack>
                             </Grid>
 
                             {/* IMAGE SIDE */}
-                            <Grid sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
+                            <Grid
+                                size={{ xs: 12, md: 5 }}
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: { xs: 'center', md: 'flex-end' },
+                                    mt: { xs: 3, md: 0 },
+                                }}
+                            >
                                 <Box
                                     sx={{
                                         position: 'relative',
-                                        maxWidth: 360,
-                                        height: 450,
+                                        maxWidth: { xs: 260, sm: 320, md: 360 },
+                                        height: { xs: 340, sm: 400, md: 450 },
                                     }}
                                 >
                                     {/* BIG GLOW BEHIND */}
