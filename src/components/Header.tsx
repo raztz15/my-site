@@ -124,7 +124,7 @@ export const Header = () => {
 
             {/* MOBILE DRAWER */}
             <SwipeableDrawer
-                anchor="right"
+                anchor="bottom"
                 open={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
                 onOpen={() => setDrawerOpen(true)}
@@ -134,10 +134,10 @@ export const Header = () => {
                     sx: {
                         bgcolor: 'rgba(15,23,42,0.98)',
                         color: 'rgba(248,250,252,0.95)',
-                        width: 260,
+                        width: '100%',
                         borderLeft: '1px solid rgba(148,163,184,0.4)',
                         boxShadow: '0 0 40px rgba(15,23,42,0.9)',
-                        borderRadius: '10px 0 0 10px',
+                        borderRadius: '10px 10px 0 0 ',
                     },
                 }}
             >
