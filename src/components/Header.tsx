@@ -50,12 +50,14 @@ export const Header = () => {
                     {/* Left side: logo / name */}
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                         <Typography
+                            onClick={() => handleScrollTo('hero')}
                             variant="h6"
                             sx={{
                                 fontWeight: 700,
                                 background: 'linear-gradient(90deg, #ff8a00, #ffcf33)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
+                                cursor: 'pointer'
                             }}
                         >
                             Dekel Raz
