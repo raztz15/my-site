@@ -13,6 +13,7 @@ export const Hero = () => {
                 display: 'flex',
                 alignItems: { xs: 'flex-start', md: 'center' },
                 py: { xs: 6, md: 10 },
+                pt: { xs: 10, md: 10 },
                 background:
                     'radial-gradient(circle at top, rgba(99, 102, 241, 0.45), transparent 55%)',
             }}
